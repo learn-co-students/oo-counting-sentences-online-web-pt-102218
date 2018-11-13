@@ -15,6 +15,12 @@ class String
   end
 
   def count_sentences
-
+    new = self.split(/[.?!]/)
+    new.map do |sentence|
+      if sentence == ""
+        new.pop()
+      end
+    end
+    new.count
   end
 end
