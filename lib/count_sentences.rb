@@ -18,9 +18,9 @@ class String
     sentences = self.split(/[.?!]/)
       sentences.each do |sentence|
         if sentence.empty? or sentence.length == 1
-          sentence.delete
+          sentences.delete(sentence)
         end
       end
-    sentences.size
+    sentences.count
   end
 end
